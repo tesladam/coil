@@ -11,6 +11,7 @@ import androidx.annotation.DrawableRes
 import coil.Coil
 import coil.ImageLoader
 import coil.request.ImageRequest
+import coil.request.Metadata
 import coil.request.RequestDisposable
 import coil.util.CoilUtils
 import okhttp3.HttpUrl
@@ -109,3 +110,9 @@ inline fun ImageView.loadAny(
 fun ImageView.clear() {
     CoilUtils.clear(this)
 }
+
+/**
+ * Retrieve the metadata of the successful request attached to this view.
+ */
+val ImageView.metadata: Metadata?
+    @JvmName("metadata") get() = CoilUtils.metadata(this)
