@@ -119,5 +119,4 @@ class ContentUriFetcherTest {
 
         return id
     }
-
 }
